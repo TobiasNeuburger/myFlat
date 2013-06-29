@@ -19,7 +19,7 @@ public class Register extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(getApplicationContext(), Register.class);
+				Intent i = new Intent(getApplicationContext(), Login.class);
         		startActivity(i);
 			}
 		});
