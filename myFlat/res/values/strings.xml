@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">myFlat</string>
+    <string name="action_settings">Einstellungen</string>
+
+    <!-- Strings for Login Form -->
+    <string name="login_logo">my flat hilft dir beim Verwalten deiner Wohnung</string>
+    <string name="login_login">Anmelden</string>
+    <string name="login_register_question">Sie haben noch keinen Account?</string>
+    <string name="login_register_solution">Jetzt registrieren!</string>
+    <string name="login_mail">Email-Adresse</string>
+    <string name="login_pass">Passwort</string>
+
+    <!-- Strings for Register Form -->
+    <string name="register_register">Account erstellen</string>
+    <string name="register_back_question">Sie haben bereits einen Accout?</string>
+    <string name="register_back_solution">Hier anmelden!</string>
+    <string name="register_firstname">Vorname</string>
+    <string name="register_lastname">Nachname</string>
+
+</resources>
