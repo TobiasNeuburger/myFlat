@@ -52,29 +52,40 @@
 	    android:layout_marginTop="20dp"
 	    android:textColor="#ffffff"
 	    android:layout_gravity="center"/>
-	
-	<TextView
-	    android:id="@+id/login_question"
+
+	<LinearLayout
+	    android:id="@+id/login_register"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
-	    android:ems="10"
-	    android:layout_marginTop="20dp"
-	    android:textColor="#ffffff"
-	    android:textAlignment="center"
-	    android:gravity="center"
-	    android:text="@string/login_register_question"
-	    style="@android:style/TextAppearance.Small" />
+	    android:orientation="vertical"
+	    android:clickable="true" >
+
+	    <TextView
+		    android:id="@+id/login_question"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:ems="10"
+		    android:layout_marginTop="20dp"
+		    android:textColor="#ffffff"
+		    android:textAlignment="center"
+		    android:gravity="center"
+		    android:text="@string/login_register_question"
+		    style="@android:style/TextAppearance.Small" />
 	
-	<TextView
-	    android:id="@+id/login_solution"
-	    style="@android:style/TextAppearance.Small"
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:ems="10"
-	    android:textColor="#ffffff"
-	    android:textAlignment="center"
-	    android:gravity="center"
-	    android:textStyle="bold"
-	    android:text="@string/login_register_solution" />
+		<TextView
+		    android:id="@+id/login_solution"
+		    style="@android:style/TextAppearance.Small"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:ems="10"
+		    android:textColor="#ffffff"
+		    android:textAlignment="center"
+		    android:gravity="center"
+		    android:textStyle="bold"
+		    android:text="@string/login_register_solution" />
+	
+	</LinearLayout>
+	
+	
 
 </LinearLayout>

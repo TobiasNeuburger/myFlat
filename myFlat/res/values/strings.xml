@@ -18,5 +18,7 @@
     <string name="register_back_solution">Hier anmelden!</string>
     <string name="register_firstname">Vorname</string>
     <string name="register_lastname">Nachname</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

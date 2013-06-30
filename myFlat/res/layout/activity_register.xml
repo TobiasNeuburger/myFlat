@@ -73,28 +73,35 @@
 	    android:textColor="#ffffff"
 	    android:layout_gravity="center"/>
 	
-	<TextView
-	    android:id="@+id/register_question"
+	<LinearLayout
+	    android:id="@+id/register_login"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
-	    android:ems="10"
-	    android:layout_marginTop="20dp"
-	    android:textColor="#ffffff"
-	    android:textAlignment="center"
-	    android:gravity="center"
-	    android:text="@string/register_back_question"
-	    style="@android:style/TextAppearance.Small" />
+	    android:orientation="vertical"
+	    android:clickable="true" >
 	
-	<TextView
-	    android:id="@+id/register_solution"
-	    style="@android:style/TextAppearance.Small"
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:ems="10"
-	    android:textColor="#ffffff"
-	    android:textAlignment="center"
-	    android:gravity="center"
-	    android:textStyle="bold"
-	    android:text="@string/register_back_solution" />
-
+		<TextView
+		    android:id="@+id/register_login_question"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:ems="10"
+		    android:layout_marginTop="20dp"
+		    android:textColor="#ffffff"
+		    android:textAlignment="center"
+		    android:gravity="center"
+		    android:text="@string/register_back_question"
+		    style="@android:style/TextAppearance.Small" />
+		
+		<TextView
+		    android:id="@+id/register_login_solution"
+		    style="@android:style/TextAppearance.Small"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:ems="10"
+		    android:textColor="#ffffff"
+		    android:textAlignment="center"
+		    android:gravity="center"
+		    android:textStyle="bold"
+		    android:text="@string/register_back_solution" />
+	</LinearLayout>
 </LinearLayout>

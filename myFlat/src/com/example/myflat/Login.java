@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.LinearLayout;
 
 public class Login extends Activity {
 
@@ -14,14 +14,15 @@ public class Login extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
 		
-		TextView tv = (TextView) findViewById(R.id.login_solution);
-		tv.setOnClickListener(new View.OnClickListener() {
+		LinearLayout ll = (LinearLayout) findViewById(R.id.login_register);
+		ll.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				Intent i = new Intent(getApplicationContext(), Register.class);
         		startActivity(i);
 			}
+			
 		});
 	}
 
