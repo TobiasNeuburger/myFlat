@@ -24,14 +24,16 @@
     <string name="title_activity_dashboard">Dashboard</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_detail">Detail</string>
-    
+
     <!-- Strings for Detail-Site -->
-    <string name="detail_water_headline" >Wasserverbrauch</string>
-    <string name="detail_water_logo" >Zählerstände für Wasserverbrauch</string>
+    <string name="detail_water_headline">Wasserverbrauch</string>
+    <string name="detail_water_logo">Zählerstände für Wasserverbrauch</string>
     <string name="detail_water_erfassen">Zählerstand erfassen</string>
     <string name="detail_date">Datum eingeben</string>
     <string name="detail_stand">Zählerstand eingeben</string>
     <string name="detail_button_submit">Speichern</string>
+    <string name="detail_water_bisher">Bisherige Zählerstände</string>
+    <string name="detail_update">Update</string>
 
     <!-- Strings for Dashboard -->
     <string name="dashboard_gas">Gasverbrauch</string>
@@ -40,5 +42,9 @@
     <string name="dashboard_logout">Abmelden</string>
     <string name="dashboard_settings">Einstellungen</string>
     <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_show_zaehler">ShowZaehler</string>
+    <string name="title_activity_show_zaeher_water">ShowZaeherWater</string>
+    <string name="title_activity_show_zaehler_water">ShowZaehlerWater</string>
+    <string name="title_activity_main">MainActivity</string>
 
 </resources>
