@@ -35,13 +35,8 @@
             android:label="@string/title_activity_dashboard" >
         </activity>
         <activity
-<<<<<<< HEAD
             android:name="com.example.myflat.Detail"
             android:label="@string/title_activity_detail" >
-=======
-            android:name="com.example.myflat.TestActivity"
-            android:label="@string/title_activity_test" >
->>>>>>> 74069c679362622785fa5d0312567b7eb8403009
         </activity>
     </application>
 
