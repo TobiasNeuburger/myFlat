@@ -2,8 +2,15 @@
 
     <item
         android:id="@+id/action_settings"
+        android:icon="@drawable/settings"
         android:orderInCategory="100"
-        android:showAsAction="never"
+        android:showAsAction="ifRoom|withText"
         android:title="@string/action_settings"/>
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/logout"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/actions_logout"/>
 
 </menu>
