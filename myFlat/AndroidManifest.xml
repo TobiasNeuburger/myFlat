@@ -34,6 +34,10 @@
             android:name="com.example.myflat.Dashboard"
             android:label="@string/title_activity_dashboard" >
         </activity>
+        <activity
+            android:name="com.example.myflat.TestActivity"
+            android:label="@string/title_activity_test" >
+        </activity>
     </application>
 
 </manifest>

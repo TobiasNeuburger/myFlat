@@ -2,7 +2,10 @@
 <resources>
 
     <string name="app_name">myFlat</string>
+
+    <!-- Strings for Actionbar -->
     <string name="action_settings">Einstellungen</string>
+    <string name="actions_logout">Abmelden</string>
 
     <!-- Strings for Login Form -->
     <string name="login_logo">my flat hilft dir beim Verwalten deiner Wohnung</string>
@@ -20,5 +23,13 @@
     <string name="register_lastname">Nachname</string>
     <string name="title_activity_dashboard">Dashboard</string>
     <string name="hello_world">Hello world!</string>
+
+    <!-- Strings for Dashboard -->
+    <string name="dashboard_gas">Gasverbrauch</string>
+    <string name="dashboard_energy">Stromverbrauch</string>
+    <string name="dashboard_water">Wasserverbrauch</string>
+    <string name="dashboard_logout">Abmelden</string>
+    <string name="dashboard_settings">Einstellungen</string>
+    <string name="title_activity_test">TestActivity</string>
 
 </resources>
