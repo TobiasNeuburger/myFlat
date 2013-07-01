@@ -20,5 +20,14 @@
     <string name="register_lastname">Nachname</string>
     <string name="title_activity_dashboard">Dashboard</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_detail">Detail</string>
+    
+    <!-- Strings for Detail-Site -->
+    <string name="detail_water_headline" >Wasserverbrauch</string>
+    <string name="detail_water_logo" >Zählerstände für Wasserverbrauch</string>
+    <string name="detail_water_erfassen">Zählerstand erfassen</string>
+    <string name="detail_date">Datum eingeben</string>
+    <string name="detail_stand">Zählerstand eingeben</string>
+    <string name="detail_button_submit">Speichern</string>
 
 </resources>
