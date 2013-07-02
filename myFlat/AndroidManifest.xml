@@ -38,7 +38,6 @@
         <activity
             android:name="com.example.myflat.Detail"
             android:label="@string/title_activity_detail" >
-<<<<<<< HEAD
         </activity>
         <activity
             android:name="com.example.myflat.ShowZaehler"
@@ -55,8 +54,6 @@
         <activity
             android:name="com.example.myflat.MainActivity"
             android:label="@string/title_activity_main" >
-=======
->>>>>>> f10a0b255793b31f13614dc356c406ed516ea928
         </activity>
     </application>
 
