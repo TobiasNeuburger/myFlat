@@ -2,6 +2,7 @@ package com.example.myflat;
 
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -14,22 +15,55 @@ import org.apache.http.message.BasicNameValuePair;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Detail extends Activity {
 
-	private static final String HOST = "backend.applab.fhws.de";
+	private static final String HOST = "192.168.1.110";
+	private static int userDay = 0;
+	private static int userMonth = 0;
+	private static int userYear = 0;
+	private static boolean userDateSet = false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_detail);
 		
+		Button update = (Button) findViewById(R.id.detail_water_update);
+		update.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent( Detail.this, ShowZaehlerWater.class );
+				startActivity(intent);
+			}
+		});
+		
+		TextView date = (TextView) findViewById(R.id.detail_date);
+		date.setOnClickListener(new View.OnClickListener() {
+			
+			@SuppressLint("NewApi")
+			@Override
+			public void onClick(View v) {
+				DialogFragment newFragment = new DatePickerFragment();
+				newFragment.show(getFragmentManager(), "datePicker");
+			}
+		});
 	}
 
 	@Override
@@ -41,11 +75,11 @@ public class Detail extends Activity {
 	
 	public void saveZaehlerWater( View view )
 	{
-		EditText dateEdit = (EditText)findViewById(R.id.detail_date);
+		TextView dateEdit = (TextView)findViewById(R.id.detail_date);
 		EditText zaehlerstandEdit = (EditText)findViewById(R.id.detail_stand);
 		
 		new SaveZaehlerWater().execute(dateEdit.getText().toString(), zaehlerstandEdit.getText().toString() );
-		
+		//Log.d("Inhalte: ", dateEdit.getText().toString() + ";" + zaehlerstandEdit.getText().toString());
 	}
 	
 	class SaveZaehlerWater extends AsyncTask<String, Void, Boolean>
@@ -64,7 +98,7 @@ public class Detail extends Activity {
 
 			try
 			{
-				HttpPost post = new HttpPost("http://" + HOST + ":8080/fhws/persons" );
+				HttpPost post = new HttpPost("http://" + HOST + ":8080/fhws/wasserzaehlers" );
 				post.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 				HttpResponse response = httpClient.execute(post);
 				int status = response.getStatusLine().getStatusCode();
@@ -94,8 +128,38 @@ public class Detail extends Activity {
 			
 			Toast.makeText(getApplication(), text, Toast.LENGTH_SHORT).show();
 			
-			Intent intent = new Intent( Detail.this, ShowZaehlerWater.class );
-			startActivity(intent);
+			//Intent intent = new Intent( Detail.this, ShowZaehlerWater.class );
+			//startActivity(intent);
+		}
+	}
+	
+	@SuppressLint("NewApi")
+	public static class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
+		
+		@SuppressLint("NewApi")
+		public Dialog onCreateDialog(Bundle savedInstanceState) {
+		    // Use the current date as the default date in the picker
+		    final Calendar c = Calendar.getInstance();
+		    int year = c.get(Calendar.YEAR);
+		    int month = c.get(Calendar.MONTH);
+		    int day = c.get(Calendar.DAY_OF_MONTH);
+		    
+		    if (userDateSet)
+		    	return new DatePickerDialog(getActivity(), this, userYear, userMonth - 1, userDay);
+		    
+		    return new DatePickerDialog(getActivity(), this, year, month, day);
+		}
+		
+		@SuppressLint("NewApi")
+		public void onDateSet(DatePicker view, int year, int month, int day) {
+			boolean userDateSet = true;
+			userDay = day;
+			userMonth = month + 1;
+			userYear = year;
+						
+			TextView dateEdit = (TextView) getActivity().findViewById(R.id.detail_date);
+			
+			dateEdit.setText(userDay + "." + userMonth + "." + userYear);
 		}
 	}
 
