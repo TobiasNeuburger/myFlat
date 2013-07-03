@@ -7,7 +7,8 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -36,7 +37,7 @@
             android:label="@string/title_activity_dashboard" >
         </activity>
         <activity
-            android:name="com.example.myflat.Detail"
+            android:name="com.example.myflat.DetailWater"
             android:label="@string/title_activity_detail" >
         </activity>
         <activity
@@ -45,7 +46,7 @@
         </activity>
         <activity
             android:name="com.example.myflat.ShowZaeherWater"
-            android:label="@string/title_activity_show_zaeher_water" >
+            android:label="@string/title_activity_show_zaehler_water" >
         </activity>
         <activity
             android:name="com.example.myflat.ShowZaehlerWater"
@@ -54,6 +55,22 @@
         <activity
             android:name="com.example.myflat.MainActivity"
             android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.example.myflat.ShowZaehlerElectro"
+            android:label="@string/title_activity_show_zaheler_electro" >
+        </activity>
+        <activity
+            android:name="com.example.myflat.DetailElectro"
+            android:label="@string/title_activity_detail_electro" >
+        </activity>
+        <activity
+            android:name="com.example.myflat.DetailGas"
+            android:label="@string/title_activity_detail_gas" >
+        </activity>
+        <activity
+            android:name="com.example.myflat.ShowZaehlerGas"
+            android:label="@string/title_activity_show_zaehler_gas" >
         </activity>
     </application>
 

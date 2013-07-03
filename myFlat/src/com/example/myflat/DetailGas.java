@@ -1,9 +1,9 @@
 package com.example.myflat;
 
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;
@@ -13,6 +13,9 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
+import com.example.myflat.DetailWater.DatePickerFragment;
+import com.example.myflat.DetailWater.SaveZaehlerWater;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.annotation.SuppressLint;
@@ -21,7 +24,6 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Intent;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -30,9 +32,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Detail extends Activity {
+public class DetailGas extends Activity {
 
-	private static final String HOST = "192.168.1.110";
+	private static final String HOST_HOME = "192.168.1.110";
+	private static final String HOST_BIB = "10.32.11.142";
 	private static int userDay = 0;
 	private static int userMonth = 0;
 	private static int userYear = 0;
@@ -41,15 +44,15 @@ public class Detail extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_detail);
+		setContentView(R.layout.activity_detail_gas);
 		
-		Button update = (Button) findViewById(R.id.detail_water_update);
+		Button update = (Button) findViewById(R.id.detail_gas_update);
 		update.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent( Detail.this, ShowZaehlerWater.class );
+				Intent intent = new Intent( DetailGas.this, ShowZaehlerGas.class );
 				startActivity(intent);
 			}
 		});
@@ -69,7 +72,7 @@ public class Detail extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.detail, menu);
+		getMenuInflater().inflate(R.menu.detail_gas, menu);
 		return true;
 	}
 	
@@ -90,15 +93,17 @@ public class Detail extends Activity {
 		{
 			String date = params[0];
 			String zaehlerStand = params[1];
+			String zaehlerart = "gas";
 			
 			HttpClient httpClient = new DefaultHttpClient();
 			List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
 			nameValuePairs.add(new BasicNameValuePair("date", date ));
 			nameValuePairs.add(new BasicNameValuePair("zaehlerStand", zaehlerStand ));
+			nameValuePairs.add(new BasicNameValuePair("zaehlerart", zaehlerart));
 
 			try
 			{
-				HttpPost post = new HttpPost("http://" + HOST + ":8080/fhws/wasserzaehlers" );
+				HttpPost post = new HttpPost("http://" + HOST_BIB + ":8080/fhws/zaehlers" );
 				post.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 				HttpResponse response = httpClient.execute(post);
 				int status = response.getStatusLine().getStatusCode();
@@ -164,5 +169,3 @@ public class Detail extends Activity {
 	}
 
 }
-
-

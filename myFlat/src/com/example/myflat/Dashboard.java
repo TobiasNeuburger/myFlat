@@ -16,16 +16,36 @@ public class Dashboard extends Activity {
 		setContentView(R.layout.activity_dashboard);
 		
 		//zum Testen
-		ImageView iv = (ImageView) findViewById(R.id.imageView1);
-		iv.setOnClickListener(new View.OnClickListener() {
+		LinearLayout ll_water = (LinearLayout) findViewById(R.id.title_activity_show_zaehler_water);
+		ll_water.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(getApplicationContext(), Detail.class);
+				Intent i = new Intent(getApplicationContext(), DetailWater.class);
         		startActivity(i);
 			}
 		});
 		
+		
+		LinearLayout ll_electro = (LinearLayout) findViewById(R.id.title_activity_show_zaehler_electro);
+		ll_electro.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(getApplicationContext(), DetailElectro.class);
+        		startActivity(i);
+			}
+		});
+		
+		LinearLayout ll_gas = (LinearLayout) findViewById(R.id.title_activity_show_zaehler_gas);
+		ll_gas.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(getApplicationContext(), DetailGas.class);
+        		startActivity(i);
+			}
+		});
 	}
 
 	@Override

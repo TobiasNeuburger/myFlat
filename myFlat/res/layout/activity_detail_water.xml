@@ -7,13 +7,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Detail" >
+    tools:context=".DetailWater" >
 
     <LinearLayout
         android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true" >
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp">
 
         <ImageView
             android:id="@+id/imageView1"
@@ -38,42 +39,33 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/linearLayout1"
         android:layout_below="@+id/linearLayout1"
-        android:layout_marginTop="32dp"
+        android:background="@drawable/layout_border"
         android:orientation="vertical" >
-
-        <EditText
-            android:id="@+id/BORDER"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/border" >
-
-            <requestFocus />
-        </EditText>
 
         <TextView
             android:id="@+id/detail_water_erfassen"
             style="@android:style/TextAppearance.Medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="@string/detail_water_erfassen"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/detail_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
             android:ems="10"
             android:hint="@string/detail_date"
+            android:linksClickable="true"
             android:textColor="#ffffff"
             android:textColorHint="#FFFFFF"
             android:textSize="18sp"
-            android:typeface="monospace"
-            android:layout_marginLeft="12dp" />
+            android:typeface="monospace" />
 
         <EditText
             android:id="@+id/detail_stand"
@@ -91,8 +83,9 @@
             android:id="@+id/button_submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
             android:onClick="saveZaehlerWater"
             android:text="@string/detail_button_submit" />
 
@@ -103,37 +96,25 @@
             android:layout_margin="10dp"
             android:background="@drawable/border" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/detail_water_bisher"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/detail_water_bisher"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
 
-       <LinearLayout
-           android:id="@+id/linearLayout3"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_alignLeft="@+id/linearLayout2"
-           android:layout_below="@+id/linearLayout2"
-           android:clickable="true"
-           android:orientation="vertical" >
-
-           <TextView
-               android:id="@+id/detail_water_bisher"
-               style="@android:style/TextAppearance.Medium"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:textStyle="bold"
-               android:layout_marginTop="10dp"
-               android:gravity="center"
-               android:text="@string/detail_water_bisher"
-               android:textColor="#ffffff" />
-
-           <Button
-               android:id="@+id/detail_water_update"
-               style="?android:attr/buttonStyleSmall"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_marginTop="10dp"
-               android:layout_gravity="center"
-               android:text="@string/detail_update" />
-
+        <Button
+            android:id="@+id/detail_water_update"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/detail_update" />
     </LinearLayout>
     
 </RelativeLayout>
