@@ -19,6 +19,9 @@ public final class R {
          */
         public static final int activity_horizontal_margin=0x7f040000;
         public static final int activity_vertical_margin=0x7f040001;
+        /**  Dashboard 
+         */
+        public static final int icon_padding=0x7f040002;
     }
     public static final class drawable {
         public static final int border=0x7f020000;
@@ -33,7 +36,15 @@ public final class R {
     }
     public static final class id {
         public static final int BORDER2=0x7f080010;
-        public static final int action_settings=0x7f08002c;
+        public static final int account_action=0x7f080030;
+        public static final int account_back=0x7f080031;
+        public static final int account_firstname=0x7f08002c;
+        public static final int account_lastname=0x7f08002d;
+        public static final int account_mail=0x7f08002e;
+        public static final int account_pass=0x7f08002f;
+        public static final int account_title=0x7f08002b;
+        public static final int action_settings=0x7f080033;
+        public static final int actions_logout=0x7f080034;
         public static final int button_submit=0x7f08000f;
         public static final int detail_date=0x7f08000d;
         public static final int detail_electro_bisher=0x7f080011;
@@ -64,7 +75,6 @@ public final class R {
         public static final int login_question=0x7f080021;
         public static final int login_register=0x7f080020;
         public static final int login_solution=0x7f080022;
-        public static final int logout=0x7f08002d;
         public static final int register_action=0x7f080027;
         public static final int register_firstname=0x7f080023;
         public static final int register_lastname=0x7f080024;
@@ -74,7 +84,7 @@ public final class R {
         public static final int register_mail=0x7f080025;
         public static final int register_pass=0x7f080026;
         public static final int textView1=0x7f080002;
-        public static final int textView2=0x7f08002b;
+        public static final int textView2=0x7f080032;
         public static final int title_activity_show_zaehler_electro=0x7f080004;
         public static final int title_activity_show_zaehler_gas=0x7f080000;
         public static final int title_activity_show_zaehler_water=0x7f080006;
@@ -86,10 +96,11 @@ public final class R {
         public static final int activity_detail_water=0x7f030003;
         public static final int activity_login=0x7f030004;
         public static final int activity_register=0x7f030005;
-        public static final int activity_show_zaehler_electro=0x7f030006;
-        public static final int activity_show_zaehler_gas=0x7f030007;
-        public static final int activity_show_zaehler_water=0x7f030008;
-        public static final int listrow=0x7f030009;
+        public static final int activity_settings=0x7f030006;
+        public static final int activity_show_zaehler_electro=0x7f030007;
+        public static final int activity_show_zaehler_gas=0x7f030008;
+        public static final int activity_show_zaehler_water=0x7f030009;
+        public static final int listrow=0x7f03000a;
     }
     public static final class menu {
         public static final int dashboard=0x7f070000;
@@ -99,11 +110,21 @@ public final class R {
         public static final int login=0x7f070004;
         public static final int main=0x7f070005;
         public static final int register=0x7f070006;
-        public static final int show_zaehler_gas=0x7f070007;
-        public static final int show_zaehler_water=0x7f070008;
-        public static final int show_zaheler_electro=0x7f070009;
+        public static final int settings=0x7f070007;
+        public static final int show_zaehler_gas=0x7f070008;
+        public static final int show_zaehler_water=0x7f070009;
+        public static final int show_zaheler_electro=0x7f07000a;
     }
     public static final class string {
+        public static final int account_action=0x7f050034;
+        public static final int account_back=0x7f050035;
+        public static final int account_firstname=0x7f050030;
+        public static final int account_lastname=0x7f050031;
+        public static final int account_mail=0x7f050032;
+        public static final int account_pass=0x7f050033;
+        /**   String für Kontoeinstellungen 
+         */
+        public static final int account_title=0x7f05002f;
         /**  Strings for Actionbar 
          */
         public static final int action_settings=0x7f050001;
@@ -154,6 +175,7 @@ public final class R {
         public static final int title_activity_detail_electro=0x7f05002c;
         public static final int title_activity_detail_gas=0x7f05002d;
         public static final int title_activity_main=0x7f05002a;
+        public static final int title_activity_settings=0x7f05002e;
         public static final int title_activity_show_zaehler=0x7f050026;
         public static final int title_activity_show_zaehler_electro=0x7f050027;
         public static final int title_activity_show_zaehler_gas=0x7f050028;

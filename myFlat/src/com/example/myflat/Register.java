@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class Register extends Activity {
 
@@ -24,6 +26,16 @@ public class Register extends Activity {
         		finish();
 			}
 			
+		});
+		
+		Button registerButton = (Button) findViewById(R.id.register_action);
+		registerButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(getApplicationContext(), "Registrierung erfolgreich!", Toast.LENGTH_SHORT).show();
+				
+			}
 		});
 	}
 

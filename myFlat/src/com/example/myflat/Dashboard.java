@@ -1,11 +1,11 @@
 package com.example.myflat;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class Dashboard extends Activity {
@@ -15,7 +15,6 @@ public class Dashboard extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dashboard);
 		
-		//zum Testen
 		LinearLayout ll_water = (LinearLayout) findViewById(R.id.title_activity_show_zaehler_water);
 		ll_water.setOnClickListener(new View.OnClickListener() {
 			
@@ -52,6 +51,26 @@ public class Dashboard extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.dashboard, menu);
+		return true;
+	}
+	
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.action_settings:
+			Intent i = new Intent(getApplicationContext(), Register.class);
+			startActivity(i);
+			break;
+		case R.id.actions_logout:
+			Intent j = new Intent(getApplicationContext(), Login.class);
+			j.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | 
+                    Intent.FLAG_ACTIVITY_CLEAR_TASK |
+                    Intent.FLAG_ACTIVITY_NEW_TASK);
+			startActivity(j);
+			break;
+		default:
+			break;
+		}
+		
 		return true;
 	}
 

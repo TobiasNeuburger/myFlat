@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#d35f55" >
+
+    <LinearLayout
+        android:id="@+id/account_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/account_title"
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:gravity="center"
+            android:text="@string/account_title"
+            android:textAlignment="center"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/account_firstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+	    android:textColor="#ffffff"
+	    android:textColorHint="#FFFFFF"
+	    android:layout_marginTop="20dp"
+	    android:layout_marginLeft="40dp"
+	    android:layout_marginRight="40dp"
+        android:inputType="textPersonName"
+	    android:typeface="monospace"
+	    android:text="@string/account_firstname" >
+	
+	    <requestFocus />
+	</EditText>
+
+    <EditText
+        android:id="@+id/account_lastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+	    android:textColor="#ffffff"
+	    android:textColorHint="#FFFFFF"
+	    android:layout_marginTop="20dp"
+	    android:layout_marginLeft="40dp"
+	    android:layout_marginRight="40dp"
+        android:inputType="textPersonName"
+	    android:typeface="monospace"
+	    android:text="@string/account_lastname" />
+	
+	<EditText
+	    android:id="@+id/account_mail"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:ems="10"
+	    android:textColor="#ffffff"
+	    android:textColorHint="#FFFFFF"
+	    android:layout_marginTop="20dp"
+	    android:layout_marginLeft="40dp"
+	    android:layout_marginRight="40dp"
+	    android:inputType="textEmailAddress"
+	    android:typeface="monospace"
+	    android:text="@string/account_mail" />
+	
+	<EditText
+	    android:id="@+id/account_pass"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="40dp"
+	    android:layout_marginRight="40dp"
+	    android:layout_marginTop="20dp"
+	    android:ems="10"
+		android:typeface="monospace"
+	    android:text="@string/account_pass"
+	    android:inputType="textPassword"
+	    android:textColor="#ffffff"
+	    android:textColorHint="#FFFFFF" />
+	
+	<Button
+	    android:id="@+id/account_action"
+	    android:layout_width="174dp"
+	    android:layout_height="wrap_content"
+	    android:text="@string/account_action" 
+	    android:layout_marginTop="20dp"
+	    android:textColor="#ffffff"
+	    android:layout_gravity="center"/>
+	
+	<Button
+	    android:id="@+id/account_back"
+	    android:layout_width="174dp"
+	    android:layout_height="wrap_content"
+	    android:text="@string/account_back" 
+	    android:layout_marginTop="20dp"
+	    android:textColor="#ffffff"
+	    android:layout_gravity="center"/>
+</LinearLayout>
