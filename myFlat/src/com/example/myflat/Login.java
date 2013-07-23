@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class Login extends Activity {
 
@@ -31,8 +33,17 @@ public class Login extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(getApplicationContext(), Dashboard.class);
-        		startActivity(i);
+				String mail = ((TextView) findViewById(R.id.login_mail)).getText().toString();
+				String pass = ((TextView) findViewById(R.id.login_pass)).getText().toString();
+				
+				if ((mail.length() != 0) && (pass.length() != 0)) {
+					Intent i = new Intent(getApplicationContext(), Dashboard.class);
+	        		startActivity(i);
+				}
+				else
+					Toast.makeText(getApplicationContext(), R.string.login_error, Toast.LENGTH_SHORT).show();
+				
+
 				
 			}
 		});

@@ -34,23 +34,28 @@
         </activity>
         <activity
             android:name="com.example.myflat.Dashboard"
-            android:label="@string/title_activity_dashboard" >
+            android:label="@string/title_activity_dashboard"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.myflat.DetailWater"
-            android:label="@string/title_activity_detail" >
+            android:label="@string/title_activity_detail_water" 
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.example.myflat.ShowZaehler"
-            android:label="@string/title_activity_show_zaehler" >
+            android:label="@string/title_activity_show_zaehler"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.myflat.ShowZaeherWater"
-            android:label="@string/title_activity_show_zaehler_water" >
+            android:label="@string/title_activity_show_zaehler_water"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.myflat.ShowZaehlerWater"
-            android:label="@string/title_activity_show_zaehler_water" >
+            android:label="@string/title_activity_show_zaehler_water"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.myflat.MainActivity"

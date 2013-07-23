@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Register extends Activity {
@@ -33,7 +34,19 @@ public class Register extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(getApplicationContext(), "Registrierung erfolgreich!", Toast.LENGTH_SHORT).show();
+				String firstName = ((TextView) findViewById(R.id.register_firstname)).getText().toString();
+				String lastName = ((TextView) findViewById(R.id.register_lastname)).getText().toString();
+				String mail = ((TextView) findViewById(R.id.register_mail)).getText().toString();
+				String pass = ((TextView) findViewById(R.id.register_pass)).getText().toString();
+				
+				if ((firstName.length() != 0) && (lastName.length() != 0) && (mail.length() != 0) && (pass.length() != 0)) {
+					Toast.makeText(getApplicationContext(), R.string.registration_confirm, Toast.LENGTH_SHORT).show();
+					Intent i = new Intent(getApplicationContext(), Login.class);
+	        		startActivity(i);
+	        		finish();
+				}
+				else
+					Toast.makeText(getApplicationContext(), R.string.registration_error, Toast.LENGTH_SHORT).show();
 				
 			}
 		});

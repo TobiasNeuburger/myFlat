@@ -57,7 +57,7 @@ public class Dashboard extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.action_settings:
-			Intent i = new Intent(getApplicationContext(), Register.class);
+			Intent i = new Intent(getApplicationContext(), Settings.class);
 			startActivity(i);
 			break;
 		case R.id.actions_logout:

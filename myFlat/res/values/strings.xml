@@ -13,6 +13,7 @@
     <string name="title_activity_detail_gas">DetailGas</string>
     <string name="title_activity_settings">Kontoeinstellungen</string>
     <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_activity_detail_water">DetailWater</string>
 
     <!-- Strings for Actionbar -->
     <string name="action_settings">Einstellungen</string>
@@ -32,7 +33,9 @@
     <string name="register_back_solution">Hier anmelden!</string>
     <string name="register_firstname">Vorname</string>
     <string name="register_lastname">Nachname</string>
-
+    <string name="register_mail">Email-Adresse</string>
+    <string name="register_pass">Passwort</string>
+    
     <!-- Strings for Detail-Site -->
     <string name="detail_water_headline">Wasserverbrauch</string>
     <string name="detail_electro_headline">Stromverbrauch</string>
@@ -65,5 +68,13 @@
     <string name="account_pass">thisIsInsecure</string>
     <string name="account_action">Ändern</string>
     <string name="account_back">Zurück</string>
+    
+    <!--  Feedback -->
+    <string name="login_error">Login fehlgeschlagen. Haben Sie alle Felder ausgefüllt?</string>
+    <string name="registration_confirm">Konto erfolgreich erstellt</string>
+    <string name="registration_error">Konto konnte nicht erstellt werden</string>
+    <string name="account_update_confirm">Konto erfolgreich aktualisiert</string>
+    <string name="account_update_error">Konto konnte nicht aktualisiert werden</string>
+    
 
 </resources>

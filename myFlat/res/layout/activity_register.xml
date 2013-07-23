@@ -48,7 +48,7 @@
 	    android:layout_marginRight="40dp"
 	    android:inputType="textEmailAddress"
 	    android:typeface="monospace"
-	    android:hint="@string/login_mail" />
+	    android:hint="@string/register_mail" />
 	
 	<EditText
 	    android:id="@+id/register_pass"
@@ -59,7 +59,7 @@
 	    android:layout_marginTop="20dp"
 	    android:ems="10"
 		android:typeface="monospace"
-	    android:hint="@string/login_pass"
+	    android:hint="@string/register_pass"
 	    android:inputType="textPassword"
 	    android:textColor="#ffffff"
 	    android:textColorHint="#FFFFFF" />
@@ -68,7 +68,7 @@
 	    android:id="@+id/register_action"
 	    android:layout_width="174dp"
 	    android:layout_height="wrap_content"
-	    android:text="@string/login_login" 
+	    android:text="@string/register_register" 
 	    android:layout_marginTop="20dp"
 	    android:textColor="#ffffff"
 	    android:layout_gravity="center"/>
