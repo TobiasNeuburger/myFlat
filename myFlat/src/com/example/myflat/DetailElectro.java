@@ -32,7 +32,7 @@ import android.widget.Toast;
 public class DetailElectro extends Activity {
 
 	private static final String HOST_HOME = "192.168.1.110";
-	private static final String HOST_BIB = "10.32.11.142";
+	private static final String HOST_BIB = "10.32.11.40";
 	private static int userDay = 0;
 	private static int userMonth = 0;
 	private static int userYear = 0;

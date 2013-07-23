@@ -21,7 +21,7 @@ import android.view.Menu;
 public class ShowZaehlerElectro extends ListActivity {
 
 	private static final String HOST_HOME = "192.168.1.110";
-	private static final String HOST_BIB = "10.32.11.142";
+	private static final String HOST_BIB = "10.32.11.40";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
