@@ -247,8 +247,8 @@ containing a value of this type.
         public static final int account_mail=0x7f040041;
         public static final int account_pass=0x7f040042;
         public static final int account_title=0x7f04003e;
-        public static final int action_settings=0x7f040046;
-        public static final int actions_logout=0x7f040047;
+        public static final int action_settings=0x7f040048;
+        public static final int actions_logout=0x7f040049;
         public static final int alignBounds=0x7f040002;
         public static final int alignMargins=0x7f040003;
         public static final int bottom=0x7f040005;
@@ -286,6 +286,8 @@ containing a value of this type.
         public static final int left=0x7f040006;
         public static final int linearLayout1=0x7f04001a;
         public static final int linearLayout2=0x7f04001d;
+        public static final int listrow_datum=0x7f040045;
+        public static final int listrow_stand=0x7f040046;
         public static final int login_action=0x7f040031;
         public static final int login_logo=0x7f04002e;
         public static final int login_mail=0x7f04002f;
@@ -304,7 +306,7 @@ containing a value of this type.
         public static final int right=0x7f040007;
         public static final int start=0x7f040010;
         public static final int textView1=0x7f040014;
-        public static final int textView2=0x7f040045;
+        public static final int textView2=0x7f040047;
         public static final int title_activity_show_zaehler_electro=0x7f040016;
         public static final int title_activity_show_zaehler_gas=0x7f040012;
         public static final int title_activity_show_zaehler_water=0x7f040018;
@@ -338,49 +340,54 @@ containing a value of this type.
         public static final int show_zaheler_electro=0x7f08000a;
     }
     public static final class string {
-        public static final int account_action=0x7f060035;
-        public static final int account_back=0x7f060036;
-        public static final int account_firstname=0x7f060031;
-        public static final int account_lastname=0x7f060032;
-        public static final int account_mail=0x7f060033;
-        public static final int account_pass=0x7f060034;
+        public static final int account_action=0x7f060038;
+        public static final int account_back=0x7f060039;
+        public static final int account_firstname=0x7f060034;
+        public static final int account_lastname=0x7f060035;
+        public static final int account_mail=0x7f060036;
+        public static final int account_pass=0x7f060037;
         /**   String für Kontoeinstellungen 
          */
-        public static final int account_title=0x7f060030;
-        public static final int account_update_confirm=0x7f06003a;
-        public static final int account_update_error=0x7f06003b;
+        public static final int account_title=0x7f060033;
+        public static final int account_update_confirm=0x7f06003d;
+        public static final int account_update_error=0x7f06003e;
         /**  Strings for Actionbar 
          */
         public static final int action_settings=0x7f06000d;
         public static final int actions_logout=0x7f06000e;
         public static final int app_name=0x7f060000;
-        public static final int dashboard_energy=0x7f06002c;
+        public static final int dashboard_energy=0x7f06002f;
         /**  Strings for Dashboard 
          */
-        public static final int dashboard_gas=0x7f06002b;
-        public static final int dashboard_logout=0x7f06002e;
-        public static final int dashboard_settings=0x7f06002f;
-        public static final int dashboard_water=0x7f06002d;
-        public static final int detail_button_submit=0x7f060027;
-        public static final int detail_date=0x7f060025;
-        public static final int detail_electro_bisher=0x7f060029;
-        public static final int detail_electro_erfassen=0x7f060023;
-        public static final int detail_electro_headline=0x7f06001d;
-        public static final int detail_electro_logo=0x7f060020;
-        public static final int detail_gas_erfassen=0x7f060024;
-        public static final int detail_gas_headline=0x7f06001e;
-        public static final int detail_gas_logo=0x7f060021;
-        public static final int detail_stand=0x7f060026;
-        public static final int detail_update=0x7f06002a;
-        public static final int detail_water_bisher=0x7f060028;
-        public static final int detail_water_erfassen=0x7f060022;
+        public static final int dashboard_gas=0x7f06002e;
+        public static final int dashboard_logout=0x7f060031;
+        public static final int dashboard_settings=0x7f060032;
+        public static final int dashboard_water=0x7f060030;
+        public static final int detail_button_submit=0x7f060029;
+        public static final int detail_date=0x7f060027;
+        public static final int detail_electro_bisher=0x7f06002b;
+        public static final int detail_electro_erfassen=0x7f060025;
+        public static final int detail_electro_headline=0x7f06001f;
+        public static final int detail_electro_logo=0x7f060022;
+        public static final int detail_gas_bisher=0x7f06002c;
+        public static final int detail_gas_erfassen=0x7f060026;
+        public static final int detail_gas_headline=0x7f060020;
+        public static final int detail_gas_logo=0x7f060023;
+        public static final int detail_stand=0x7f060028;
+        public static final int detail_update=0x7f06002d;
+        public static final int detail_water_bisher=0x7f06002a;
+        public static final int detail_water_erfassen=0x7f060024;
         /**  Strings for Detail-Site 
          */
-        public static final int detail_water_headline=0x7f06001c;
-        public static final int detail_water_logo=0x7f06001f;
+        public static final int detail_water_headline=0x7f06001e;
+        public static final int detail_water_logo=0x7f060021;
+        /**  Strings for Detail-Site 
+         */
+        public static final int listrow_datum=0x7f06001c;
+        public static final int listrow_stand=0x7f06001d;
         /**   Feedback 
          */
-        public static final int login_error=0x7f060037;
+        public static final int login_error=0x7f06003a;
         public static final int login_login=0x7f060010;
         /**  Strings for Login Form 
          */
@@ -398,8 +405,8 @@ containing a value of this type.
         /**  Strings for Register Form 
          */
         public static final int register_register=0x7f060015;
-        public static final int registration_confirm=0x7f060038;
-        public static final int registration_error=0x7f060039;
+        public static final int registration_confirm=0x7f06003b;
+        public static final int registration_error=0x7f06003c;
         public static final int title_activity_dashboard=0x7f06000b;
         public static final int title_activity_detail_electro=0x7f060008;
         public static final int title_activity_detail_gas=0x7f060009;

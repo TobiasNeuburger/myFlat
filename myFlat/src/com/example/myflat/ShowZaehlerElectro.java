@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ListActivity;
+import android.util.Log;
 import android.view.Menu;
 
 public class ShowZaehlerElectro extends ListActivity {
@@ -53,7 +54,7 @@ public class ShowZaehlerElectro extends ListActivity {
 		protected DataAdapter doInBackground(Void... params) 
 		{
 			HttpClient client = new DefaultHttpClient();
-			HttpGet get = new HttpGet( "http://" + HOST_BIB + ":8080/fhws/zaehlers" );
+			HttpGet get = new HttpGet( "http://" + HOST_HOME + ":8080/fhws/zaehlers" );
 			DataAdapter adapter = new DataAdapter(ShowZaehlerElectro.this);
 			
 			try
@@ -63,8 +64,9 @@ public class ShowZaehlerElectro extends ListActivity {
 				BufferedReader br = new BufferedReader( new InputStreamReader( is ));
 				String line = null;
 				
-				while( (line = br.readLine()) != null )
+				while( (line = br.readLine()) != null)
 				{
+					if(line.contains("electric"))
 					adapter.addData(line);
 				}
 			}

@@ -53,7 +53,7 @@ public class ShowZaehlerGas extends ListActivity {
 		protected DataAdapter doInBackground(Void... params) 
 		{
 			HttpClient client = new DefaultHttpClient();
-			HttpGet get = new HttpGet( "http://" + HOST_BIB + ":8080/fhws/zaehlers" );
+			HttpGet get = new HttpGet( "http://" + HOST_HOME + ":8080/fhws/zaehlers" );
 			DataAdapter adapter = new DataAdapter(ShowZaehlerGas.this);
 			
 			try
@@ -65,6 +65,7 @@ public class ShowZaehlerGas extends ListActivity {
 				
 				while( (line = br.readLine()) != null )
 				{
+					if(line.contains("gas"))
 					adapter.addData(line);
 				}
 			}

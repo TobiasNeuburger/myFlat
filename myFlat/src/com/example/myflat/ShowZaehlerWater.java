@@ -13,6 +13,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Dialog;
 import android.app.ListActivity;
+import android.util.Log;
 import android.view.Menu;
 
 
@@ -51,7 +52,7 @@ public class ShowZaehlerWater extends ListActivity {
 			protected DataAdapter doInBackground(Void... params) 
 			{
 				HttpClient client = new DefaultHttpClient();
-				HttpGet get = new HttpGet( "http://" + HOST_BIB + ":8080/fhws/zaehlers" );
+				HttpGet get = new HttpGet( "http://" + HOST_HOME + ":8080/fhws/zaehlers" );
 				DataAdapter adapter = new DataAdapter(ShowZaehlerWater.this);
 				
 				try
@@ -63,6 +64,7 @@ public class ShowZaehlerWater extends ListActivity {
 					
 					while( (line = br.readLine()) != null )
 					{
+						if(line.contains("water"))
 						adapter.addData(line);
 					}
 				}

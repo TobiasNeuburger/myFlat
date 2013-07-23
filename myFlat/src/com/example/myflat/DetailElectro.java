@@ -33,7 +33,6 @@ public class DetailElectro extends Activity {
 
 	private static final String HOST_HOME = "192.168.1.110";
 	private static final String HOST_BIB = "10.32.11.40";
-	private static final String HOST_BIB2 = "10.32.11.142";
 	private static final String HOST_TN = "192.168.178.24";
 	private static int userDay = 0;
 	private static int userMonth = 0;
@@ -51,7 +50,7 @@ public class DetailElectro extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent( DetailElectro.this, ShowZaehlerGas.class );
+				Intent intent = new Intent( DetailElectro.this, ShowZaehlerElectro.class );
 				startActivity(intent);
 			}
 		});
@@ -102,7 +101,7 @@ public class DetailElectro extends Activity {
 
 			try
 			{
-				HttpPost post = new HttpPost("http://" + HOST_TN + ":8080/fhws/zaehlers" );
+				HttpPost post = new HttpPost("http://" + HOST_HOME + ":8080/fhws/zaehlers" );
 				post.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 				HttpResponse response = httpClient.execute(post);
 				int status = response.getStatusLine().getStatusCode();

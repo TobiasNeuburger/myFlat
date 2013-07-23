@@ -35,6 +35,10 @@
     <string name="register_lastname">Nachname</string>
     <string name="register_mail">Email-Adresse</string>
     <string name="register_pass">Passwort</string>
+  
+    <!-- Strings for Detail-Site -->
+    <string name="listrow_datum">Datum</string>
+    <string name="listrow_stand">Zählerstand</string>
     
     <!-- Strings for Detail-Site -->
     <string name="detail_water_headline">Wasserverbrauch</string>
@@ -51,7 +55,8 @@
     <string name="detail_button_submit">Speichern</string>
     <string name="detail_water_bisher">Bisherige Zählerstände</string>
     <string name="detail_electro_bisher">Bisherige Zählerstände</string>
-    <string name="detail_update">Update</string>
+    <string name="detail_gas_bisher">Bisherige Zählerstände</string>
+    <string name="detail_update">Zählerstände anzeigen</string>
 
     <!-- Strings for Dashboard -->
     <string name="dashboard_gas">Gasverbrauch</string>

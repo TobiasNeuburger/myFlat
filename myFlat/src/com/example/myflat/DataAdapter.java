@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 public class DataAdapter extends BaseAdapter {
-	
+
 	private List<String> data = new LinkedList<String>();
 	
 	private Context context;
@@ -40,6 +41,7 @@ public class DataAdapter extends BaseAdapter {
 	public long getItemId(int position) {
 		return position;
 	}
+	
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
@@ -52,11 +54,11 @@ public class DataAdapter extends BaseAdapter {
 		
 		String[] elems = this.data.get(position).split(";");
 		
-		TextView tv = (TextView)myview.findViewById(R.id.textView1);
-		tv.setText(elems[1] + " " + elems[2]);
+		TextView zaehlerstand = (TextView)myview.findViewById(R.id.textView1);
+		zaehlerstand.setText(elems[2]);
 		
-		TextView c = (TextView)myview.findViewById(R.id.textView2);
-		c.setText(elems[0]);
+		TextView datum = (TextView)myview.findViewById(R.id.textView2);
+		datum.setText(elems[1]);
 		
 		return myview;
 	}

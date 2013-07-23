@@ -101,7 +101,7 @@ public class DetailWater extends Activity {
 
 			try
 			{
-				HttpPost post = new HttpPost("http://" + HOST_BIB + ":8080/fhws/zaehlers" );
+				HttpPost post = new HttpPost("http://" + HOST_HOME + ":8080/fhws/zaehlers" );
 				post.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 				HttpResponse response = httpClient.execute(post);
 				int status = response.getStatusLine().getStatusCode();
