@@ -5,8 +5,28 @@
     android:orientation="vertical"
     android:background="#d35f55" >
 
+    <LinearLayout
+        android:id="@+id/account_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/account_title"
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:gravity="center"
+            android:text="@string/account_title"
+            android:textAlignment="center"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
     <EditText
-        android:id="@+id/register_firstname"
+        android:id="@+id/account_firstname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -17,13 +37,13 @@
 	    android:layout_marginRight="40dp"
         android:inputType="textPersonName"
 	    android:typeface="monospace"
-	    android:hint="@string/register_firstname" >
+	    android:text="@string/account_firstname" >
 	
 	    <requestFocus />
 	</EditText>
 
     <EditText
-        android:id="@+id/register_lastname"
+        android:id="@+id/account_lastname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -34,10 +54,10 @@
 	    android:layout_marginRight="40dp"
         android:inputType="textPersonName"
 	    android:typeface="monospace"
-	    android:hint="@string/register_lastname" />
+	    android:text="@string/account_lastname" />
 	
 	<EditText
-	    android:id="@+id/register_mail"
+	    android:id="@+id/account_mail"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:ems="10"
@@ -48,10 +68,10 @@
 	    android:layout_marginRight="40dp"
 	    android:inputType="textEmailAddress"
 	    android:typeface="monospace"
-	    android:hint="@string/register_mail" />
+	    android:text="@string/account_mail" />
 	
 	<EditText
-	    android:id="@+id/register_pass"
+	    android:id="@+id/account_pass"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_marginLeft="40dp"
@@ -59,49 +79,26 @@
 	    android:layout_marginTop="20dp"
 	    android:ems="10"
 		android:typeface="monospace"
-	    android:hint="@string/register_pass"
+	    android:text="@string/account_pass"
 	    android:inputType="textPassword"
 	    android:textColor="#ffffff"
 	    android:textColorHint="#FFFFFF" />
 	
 	<Button
-	    android:id="@+id/register_action"
+	    android:id="@+id/account_action"
 	    android:layout_width="174dp"
 	    android:layout_height="wrap_content"
-	    android:text="@string/register_register" 
+	    android:text="@string/account_action" 
 	    android:layout_marginTop="20dp"
 	    android:textColor="#ffffff"
 	    android:layout_gravity="center"/>
 	
-	<LinearLayout
-	    android:id="@+id/register_login"
-	    android:layout_width="match_parent"
+	<Button
+	    android:id="@+id/account_back"
+	    android:layout_width="174dp"
 	    android:layout_height="wrap_content"
-	    android:orientation="vertical"
-	    android:clickable="true" >
-	
-		<TextView
-		    android:id="@+id/register_login_question"
-		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content"
-		    android:ems="10"
-		    android:layout_marginTop="20dp"
-		    android:textColor="#ffffff"
-		    android:textAlignment="center"
-		    android:gravity="center"
-		    android:text="@string/register_back_question"
-		    style="@android:style/TextAppearance.Small" />
-		
-		<TextView
-		    android:id="@+id/register_login_solution"
-		    style="@android:style/TextAppearance.Small"
-		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content"
-		    android:ems="10"
-		    android:textColor="#ffffff"
-		    android:textAlignment="center"
-		    android:gravity="center"
-		    android:textStyle="bold"
-		    android:text="@string/register_back_solution" />
-	</LinearLayout>
+	    android:text="@string/account_back" 
+	    android:layout_marginTop="20dp"
+	    android:textColor="#ffffff"
+	    android:layout_gravity="center"/>
 </LinearLayout>

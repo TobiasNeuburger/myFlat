@@ -2,6 +2,18 @@
 <resources>
 
     <string name="app_name">myFlat</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_show_zaehler">ShowZaehler</string>
+    <string name="title_activity_show_zaehler_electro">ShowZaehlerElectro</string>
+    <string name="title_activity_show_zaehler_gas">ShowZaehlerGas</string>
+    <string name="title_activity_show_zaehler_water">ShowZaehlerWater</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_show_zaheler_electro">ShowZahelerElectro</string>
+    <string name="title_activity_detail_electro">DetailElectro</string>
+    <string name="title_activity_detail_gas">DetailGas</string>
+    <string name="title_activity_settings">Kontoeinstellungen</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_activity_detail_water">DetailWater</string>
 
     <!-- Strings for Actionbar -->
     <string name="action_settings">Einstellungen</string>
@@ -17,14 +29,13 @@
 
     <!-- Strings for Register Form -->
     <string name="register_register">Account erstellen</string>
-    <string name="register_back_question">Sie haben bereits einen Accout?</string>
+    <string name="register_back_question">Sie haben bereits einen Account?</string>
     <string name="register_back_solution">Hier anmelden!</string>
     <string name="register_firstname">Vorname</string>
     <string name="register_lastname">Nachname</string>
-    <string name="title_activity_dashboard">Dashboard</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_detail">Detail</string>
-
+    <string name="register_mail">Email-Adresse</string>
+    <string name="register_pass">Passwort</string>
+    
     <!-- Strings for Detail-Site -->
     <string name="detail_water_headline">Wasserverbrauch</string>
     <string name="detail_electro_headline">Stromverbrauch</string>
@@ -48,14 +59,22 @@
     <string name="dashboard_water">Wasserverbrauch</string>
     <string name="dashboard_logout">Abmelden</string>
     <string name="dashboard_settings">Einstellungen</string>
-    <string name="title_activity_test">TestActivity</string>
-    <string name="title_activity_show_zaehler">ShowZaehler</string>
-    <string name="title_activity_show_zaehler_electro">ShowZaehlerElectro</string>
-    <string name="title_activity_show_zaehler_gas">ShowZaehlerGas</string>
-    <string name="title_activity_show_zaehler_water">ShowZaehlerWater</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_show_zaheler_electro">ShowZahelerElectro</string>
-    <string name="title_activity_detail_electro">DetailElectro</string>
-    <string name="title_activity_detail_gas">DetailGas</string>
+    
+    <!--  String für Kontoeinstellungen -->
+    <string name="account_title">Hier können Sie Ihre persönlichen Daten ändern, indem Sie die vorbelegten Werte einfach überschreiben.</string>
+    <string name="account_firstname">Hans</string>
+    <string name="account_lastname">Meier</string>
+    <string name="account_mail">hans.meier@fhws.de</string>
+    <string name="account_pass">thisIsInsecure</string>
+    <string name="account_action">Ändern</string>
+    <string name="account_back">Zurück</string>
+    
+    <!--  Feedback -->
+    <string name="login_error">Login fehlgeschlagen. Haben Sie alle Felder ausgefüllt?</string>
+    <string name="registration_confirm">Konto erfolgreich erstellt</string>
+    <string name="registration_error">Konto konnte nicht erstellt werden</string>
+    <string name="account_update_confirm">Konto erfolgreich aktualisiert</string>
+    <string name="account_update_error">Konto konnte nicht aktualisiert werden</string>
+    
 
 </resources>

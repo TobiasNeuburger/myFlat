@@ -7,7 +7,7 @@
         android:showAsAction="ifRoom|withText"
         android:title="@string/action_settings"/>
     <item
-        android:id="@+id/logout"
+        android:id="@+id/actions_logout"
         android:icon="@drawable/logout"
         android:orderInCategory="100"
         android:showAsAction="ifRoom|withText"

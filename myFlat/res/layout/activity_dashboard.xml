@@ -23,6 +23,7 @@
             android:id="@+id/image_gas"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:padding="@dimen/icon_padding"
             android:src="@drawable/fire" />
 
         <TextView
@@ -42,6 +43,7 @@
 	    android:layout_width="match_parent"
 	    android:layout_height="2dp"
 	    android:layout_margin="10dp"
+        android:padding="@dimen/icon_padding"
 	    android:background="@drawable/border" />
 	
 	 <LinearLayout
@@ -56,6 +58,7 @@
 	    	android:id="@+id/image_electro"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:padding="@dimen/icon_padding"
             android:src="@drawable/energy" />
 
         <TextView
@@ -75,6 +78,7 @@
 	    android:layout_width="match_parent"
 	    android:layout_height="2dp"
 	    android:layout_margin="10dp"
+	    android:editable="false"
 	    android:background="@drawable/border" />
 	
 	 <LinearLayout
@@ -89,6 +93,7 @@
             android:id="@+id/image_water"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:padding="@dimen/icon_padding"
             android:src="@drawable/drop" />
 
         <TextView
