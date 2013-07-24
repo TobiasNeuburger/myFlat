@@ -67,7 +67,8 @@
             android:textColor="#ffffff"
             android:textColorHint="#FFFFFF"
             android:textSize="18sp"
-            android:typeface="monospace" />
+            android:typeface="monospace"
+            android:textIsSelectable="true" />
 
         <EditText
             android:id="@+id/detail_stand"

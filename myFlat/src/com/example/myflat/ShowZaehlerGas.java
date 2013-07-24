@@ -21,7 +21,7 @@ import android.view.Menu;
 public class ShowZaehlerGas extends ListActivity {
 
 	private static final String HOST_HOME = "192.168.1.110";
-	private static final String HOST_BIB = "10.32.11.142";
+	private static final String HOST_BIB = "10.32.11.33";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
@@ -53,7 +53,7 @@ public class ShowZaehlerGas extends ListActivity {
 		protected DataAdapter doInBackground(Void... params) 
 		{
 			HttpClient client = new DefaultHttpClient();
-			HttpGet get = new HttpGet( "http://" + HOST_HOME + ":8080/fhws/zaehlers" );
+			HttpGet get = new HttpGet( "http://" + HOST_BIB + ":8080/fhws/zaehlers" );
 			DataAdapter adapter = new DataAdapter(ShowZaehlerGas.this);
 			
 			try
