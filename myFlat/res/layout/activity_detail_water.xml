@@ -30,6 +30,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="30dp"
             android:text="@string/detail_water_headline"
+            android:textColor="#ffffff"
             android:textAppearance="?android:attr/textAppearanceLarge" />
     </LinearLayout>
 
@@ -58,7 +59,6 @@
             android:id="@+id/detail_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
             android:ems="10"
             android:hint="@string/detail_date"
             android:linksClickable="true"

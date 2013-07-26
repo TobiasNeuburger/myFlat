@@ -63,19 +63,23 @@
         </activity>
         <activity
             android:name="com.example.myflat.ShowZaehlerElectro"
-            android:label="@string/title_activity_show_zaheler_electro" >
+            android:label="@string/title_activity_show_zaheler_electro"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.myflat.DetailElectro"
-            android:label="@string/title_activity_detail_electro" >
+            android:label="@string/title_activity_detail_electro"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.myflat.DetailGas"
-            android:label="@string/title_activity_detail_gas" >
+            android:label="@string/title_activity_detail_gas"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.myflat.ShowZaehlerGas"
-            android:label="@string/title_activity_show_zaehler_gas" >
+            android:label="@string/title_activity_show_zaehler_gas"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.myflat.Settings"
