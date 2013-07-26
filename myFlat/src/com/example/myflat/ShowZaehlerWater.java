@@ -19,8 +19,7 @@ import android.view.Menu;
 
 public class ShowZaehlerWater extends ListActivity {
 
-		private static final String HOST_HOME = "192.168.1.110";
-		private static final String HOST_BIB = "10.32.11.33";
+		private static final String HOST = new Host().getHost();
 
 		@Override
 		protected void onCreate(Bundle savedInstanceState) 
@@ -52,7 +51,7 @@ public class ShowZaehlerWater extends ListActivity {
 			protected DataAdapter doInBackground(Void... params) 
 			{
 				HttpClient client = new DefaultHttpClient();
-				HttpGet get = new HttpGet( "http://" + HOST_BIB + ":8080/fhws/zaehlers" );
+				HttpGet get = new HttpGet( "http://" + HOST + ":8080/fhws/zaehlers" );
 				DataAdapter adapter = new DataAdapter(ShowZaehlerWater.this);
 				
 				try

@@ -34,8 +34,7 @@ import android.widget.Toast;
 
 public class DetailGas extends Activity {
 
-	private static final String HOST_HOME = "192.168.1.110";
-	private static final String HOST_BIB = "10.32.11.33";
+	private static final String HOST = new Host().getHost();	
 	private static int userDay = 0;
 	private static int userMonth = 0;
 	private static int userYear = 0;
@@ -103,7 +102,7 @@ public class DetailGas extends Activity {
 
 			try
 			{
-				HttpPost post = new HttpPost("http://" + HOST_BIB + ":8080/fhws/zaehlers" );
+				HttpPost post = new HttpPost("http://" + HOST + ":8080/fhws/zaehlers" );
 				post.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 				HttpResponse response = httpClient.execute(post);
 				int status = response.getStatusLine().getStatusCode();

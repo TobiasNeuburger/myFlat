@@ -44,7 +44,8 @@
 	    android:layout_height="2dp"
 	    android:layout_margin="10dp"
         android:padding="@dimen/icon_padding"
-	    android:background="@drawable/border" />
+	    android:background="@drawable/border"
+	    android:inputType="none" />
 	
 	 <LinearLayout
 	     android:id="@+id/title_activity_show_zaehler_electro"
@@ -79,7 +80,8 @@
 	    android:layout_height="2dp"
 	    android:layout_margin="10dp"
 	    android:editable="false"
-	    android:background="@drawable/border" />
+	    android:background="@drawable/border"
+	    android:inputType="none"  />
 	
 	 <LinearLayout
 	     android:id="@+id/title_activity_show_zaehler_water"
