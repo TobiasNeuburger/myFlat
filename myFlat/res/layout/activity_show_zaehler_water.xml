@@ -13,7 +13,7 @@
         android:id="@+id/android:list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="30dp" >
+        android:layout_marginTop="50dp" >
     </ListView>
 
     <LinearLayout
@@ -26,7 +26,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:text="@string/listrow_datum"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:textColor="#ffffff" />
 
         <TextView
             android:id="@+id/listrow_stand"
@@ -34,7 +35,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:text="@string/listrow_stand"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:textColor="#ffffff" />
     </LinearLayout>
 
 </RelativeLayout>
