@@ -48,11 +48,11 @@ public final class R {
         public static final int actions_logout=0x7f08003c;
         public static final int button_submit=0x7f08000f;
         public static final int context_account=0x7f080040;
-        public static final int context_dashboard_electric=0x7f08003b;
+        public static final int context_dashboard_electric=0x7f08003a;
         public static final int context_dashboard_gas=0x7f080039;
         public static final int context_dashboard_logout=0x7f080038;
         public static final int context_dashboard_settings=0x7f080037;
-        public static final int context_dashboard_water=0x7f08003a;
+        public static final int context_dashboard_water=0x7f08003b;
         public static final int context_login=0x7f08003e;
         public static final int context_register=0x7f08003f;
         public static final int detail_date=0x7f08000d;
@@ -147,9 +147,9 @@ public final class R {
         public static final int actions_logout=0x7f05000d;
         public static final int app_name=0x7f050000;
         public static final int context_account=0x7f050013;
-        public static final int context_dashboard_electric=0x7f050012;
+        public static final int context_dashboard_electric=0x7f050011;
         public static final int context_dashboard_gas=0x7f050010;
-        public static final int context_dashboard_water=0x7f050011;
+        public static final int context_dashboard_water=0x7f050012;
         public static final int context_login=0x7f05000e;
         public static final int context_register=0x7f05000f;
         public static final int dashboard_energy=0x7f050035;
