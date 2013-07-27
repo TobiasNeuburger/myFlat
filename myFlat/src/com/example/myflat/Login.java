@@ -22,8 +22,8 @@ public class Login extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(getApplicationContext(), Register.class);
-        		startActivity(i);
+				Intent intent = new Intent(getApplicationContext(), Register.class);
+        		startActivity(intent);
 			}
 			
 		});
@@ -37,14 +37,12 @@ public class Login extends Activity {
 				String pass = ((TextView) findViewById(R.id.login_pass)).getText().toString();
 				
 				if ((mail.length() != 0) && (pass.length() != 0)) {
-					Intent i = new Intent(getApplicationContext(), Dashboard.class);
-	        		startActivity(i);
+					Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+					intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+	        		startActivity(intent);
 				}
 				else
 					Toast.makeText(getApplicationContext(), R.string.login_error, Toast.LENGTH_SHORT).show();
-				
-
-				
 			}
 		});
 	}

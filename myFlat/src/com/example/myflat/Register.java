@@ -22,9 +22,9 @@ public class Register extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(getApplicationContext(), Login.class);
-        		startActivity(i);
-        		finish();
+				Intent intent = new Intent(getApplicationContext(), Login.class);
+				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        		startActivity(intent);
 			}
 			
 		});
@@ -41,9 +41,9 @@ public class Register extends Activity {
 				
 				if ((firstName.length() != 0) && (lastName.length() != 0) && (mail.length() != 0) && (pass.length() != 0)) {
 					Toast.makeText(getApplicationContext(), R.string.registration_confirm, Toast.LENGTH_SHORT).show();
-					Intent i = new Intent(getApplicationContext(), Login.class);
-	        		startActivity(i);
-	        		finish();
+					Intent intent = new Intent(getApplicationContext(), Login.class);
+					intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+	        		startActivity(intent);
 				}
 				else
 					Toast.makeText(getApplicationContext(), R.string.registration_error, Toast.LENGTH_SHORT).show();

@@ -37,7 +37,7 @@
 	    android:layout_marginRight="40dp"
         android:inputType="textPersonName"
 	    android:typeface="monospace"
-	    android:text="@string/account_firstname" >
+	    android:hint="@string/account_firstname" >
 	
 	    <requestFocus />
 	</EditText>
@@ -54,7 +54,7 @@
 	    android:layout_marginRight="40dp"
         android:inputType="textPersonName"
 	    android:typeface="monospace"
-	    android:text="@string/account_lastname" />
+	    android:hint="@string/account_lastname" />
 	
 	<EditText
 	    android:id="@+id/account_mail"
@@ -68,7 +68,7 @@
 	    android:layout_marginRight="40dp"
 	    android:inputType="textEmailAddress"
 	    android:typeface="monospace"
-	    android:text="@string/account_mail" />
+	    android:hint="@string/account_mail" />
 	
 	<EditText
 	    android:id="@+id/account_pass"
@@ -79,7 +79,7 @@
 	    android:layout_marginTop="20dp"
 	    android:ems="10"
 		android:typeface="monospace"
-	    android:text="@string/account_pass"
+	    android:hint="@string/account_pass"
 	    android:inputType="textPassword"
 	    android:textColor="#ffffff"
 	    android:textColorHint="#FFFFFF" />

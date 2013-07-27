@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#d35f55"
+    android:orientation="vertical" >
+
+	<ImageView
+	    android:id="@+id/login_logo"
+	    android:layout_width="180dp"
+	    android:layout_height="198dp"
+	    android:layout_gravity="center"
+	    android:src="@drawable/logo"
+	    android:contentDescription="@string/login_logo" />
+
+	<ProgressBar
+	    android:id="@+id/progressBar1"
+	    style="?android:attr/progressBarStyleLarge"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:layout_gravity="center"
+	    android:layout_marginTop="30dp"
+	    android:layout_marginBottom="20dp"/>
+	
+	<TextView
+		    android:id="@+id/login_question"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:ems="10"
+		    android:layout_marginTop="20dp"
+		    android:textColor="#ffffff"
+		    android:textAlignment="center"
+		    android:gravity="center"
+		    android:text="@string/start_wait"
+		    style="@android:style/TextAppearance.Small" />
+
+</LinearLayout>

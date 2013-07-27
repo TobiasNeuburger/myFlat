@@ -2,13 +2,12 @@
 <resources>
 
     <string name="app_name">myFlat</string>
-    <string name="title_activity_test">TestActivity</string>
-    <string name="title_activity_show_zaehler">ShowZaehler</string>
+    <string name="title_activity_start">myFlat</string>
+    <string name="title_activity_login">myFlat: Login</string>
+    <string name="title_activity_register">myFlat: Register</string>
     <string name="title_activity_show_zaehler_electro">Anzeige Stromverbrauch</string>
     <string name="title_activity_show_zaehler_gas">Anzeige Gasverbrauch</string>
     <string name="title_activity_show_zaehler_water">Anzeige Wasserverbrauch</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_show_zaheler_electro">ShowZahelerElectro</string>
     <string name="title_activity_detail_electro">Stromverbrauch</string>
     <string name="title_activity_detail_gas">Gasverbrauch</string>
     <string name="title_activity_settings">Kontoeinstellungen</string>
@@ -19,6 +18,9 @@
     <string name="action_settings">Einstellungen</string>
     <string name="actions_logout">Abmelden</string>
 
+    <!-- String for Start Screen -->
+    <string name="start_wait">Bitte warten</string>
+    
     <!-- Strings for Login Form -->
     <string name="login_logo">my flat hilft dir beim Verwalten deiner Wohnung</string>
     <string name="login_login">Anmelden</string>
@@ -35,11 +37,11 @@
     <string name="register_lastname">Nachname</string>
     <string name="register_mail">Email-Adresse</string>
     <string name="register_pass">Passwort</string>
-  
+
     <!-- Strings for Detail-Site -->
     <string name="listrow_datum">Datum</string>
     <string name="listrow_stand">Zählerstand</string>
-    
+
     <!-- Strings for Detail-Site -->
     <string name="detail_water_headline">Wasserverbrauch</string>
     <string name="detail_electro_headline">Stromverbrauch</string>
@@ -64,22 +66,21 @@
     <string name="dashboard_water">Wasserverbrauch</string>
     <string name="dashboard_logout">Abmelden</string>
     <string name="dashboard_settings">Einstellungen</string>
-    
-    <!--  String für Kontoeinstellungen -->
+
+    <!-- String für Kontoeinstellungen -->
     <string name="account_title">Hier können Sie Ihre persönlichen Daten ändern, indem Sie die vorbelegten Werte einfach überschreiben.</string>
-    <string name="account_firstname">Hans</string>
-    <string name="account_lastname">Meier</string>
-    <string name="account_mail">hans.meier@fhws.de</string>
-    <string name="account_pass">thisIsInsecure</string>
+    <string name="account_firstname">Vorname</string>
+    <string name="account_lastname">Nachname</string>
+    <string name="account_mail">Email-Adresse</string>
+    <string name="account_pass">Passwort</string>
     <string name="account_action">Ändern</string>
     <string name="account_back">Zurück</string>
-    
-    <!--  Feedback -->
+
+    <!-- Feedback -->
     <string name="login_error">Login fehlgeschlagen. Haben Sie alle Felder ausgefüllt?</string>
     <string name="registration_confirm">Konto erfolgreich erstellt</string>
     <string name="registration_error">Konto konnte nicht erstellt werden</string>
     <string name="account_update_confirm">Konto erfolgreich aktualisiert</string>
     <string name="account_update_error">Konto konnte nicht aktualisiert werden</string>
-    
 
 </resources>
