@@ -14,10 +14,16 @@
     <string name="title_activity_dashboard">Dashboard</string>
     <string name="title_activity_detail_water">Wasserverbrauch</string>
 
-    <!-- Strings for Actionbar -->
+    <!-- Strings for Actionbar und Menus-->
     <string name="action_settings">Einstellungen</string>
     <string name="actions_logout">Abmelden</string>
-
+    <string name="context_login">Registrieren</string>
+    <string name="context_register">Anmelden</string>
+    <string name="context_dashboard_gas">Gasverbrauch</string>
+    <string name="context_dashboard_electric">Stromverbrauch</string>
+    <string name="context_dashboard_water">Wasserverbrauch</string>
+    <string name="context_account">Dashboard</string>
+    
     <!-- String for Start Screen -->
     <string name="start_wait">Bitte warten</string>
     
