@@ -77,7 +77,6 @@ public class Dashboard extends Activity {
 			Intent m = new Intent(getApplicationContext(), DetailWater.class);
 			startActivity(m);
 			break;
-
 		default:
 			break;
 		}

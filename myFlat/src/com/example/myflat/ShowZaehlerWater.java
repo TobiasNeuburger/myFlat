@@ -9,12 +9,11 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-import android.os.AsyncTask;
-import android.os.Bundle;
 import android.app.Dialog;
 import android.app.ListActivity;
 import android.content.Intent;
-import android.util.Log;
+import android.os.AsyncTask;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
