@@ -13,8 +13,10 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Dialog;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 
 
 public class ShowZaehlerWater extends ListActivity {
@@ -36,16 +38,29 @@ public class ShowZaehlerWater extends ListActivity {
 			return true;
 		}
 		
+		public boolean onOptionsItemSelected(MenuItem item) {
+			switch (item.getItemId()) {
+			case R.id.action_settings:
+				Intent i = new Intent(getApplicationContext(), Settings.class);
+				startActivity(i);
+				break;
+			case R.id.actions_logout:
+				Intent j = new Intent(getApplicationContext(), Login.class);
+				j.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | 
+	                    Intent.FLAG_ACTIVITY_CLEAR_TASK |
+	                    Intent.FLAG_ACTIVITY_NEW_TASK);
+				startActivity(j);
+				break;
+			default:
+				break;
+			}
+			
+			return true;
+		}
+		
 		class LoadAllZaehlerstaende extends AsyncTask<Void,Void,DataAdapter>
 		{
 			Dialog progress;
-
-		    @Override
-		    protected void onPreExecute() {
-//		        progress = ProgressDialog.show(ShowPersons.this, 
-//		                "Loading data", "Please wait...");
-		        super.onPreExecute();
-		    }
 
 			@Override
 			protected DataAdapter doInBackground(Void... params) 

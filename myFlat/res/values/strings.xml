@@ -4,16 +4,16 @@
     <string name="app_name">myFlat</string>
     <string name="title_activity_test">TestActivity</string>
     <string name="title_activity_show_zaehler">ShowZaehler</string>
-    <string name="title_activity_show_zaehler_electro">ShowZaehlerElectro</string>
-    <string name="title_activity_show_zaehler_gas">ShowZaehlerGas</string>
-    <string name="title_activity_show_zaehler_water">ShowZaehlerWater</string>
+    <string name="title_activity_show_zaehler_electro">Anzeige Stromverbrauch</string>
+    <string name="title_activity_show_zaehler_gas">Anzeige Gasverbrauch</string>
+    <string name="title_activity_show_zaehler_water">Anzeige Wasserverbrauch</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_show_zaheler_electro">ShowZahelerElectro</string>
-    <string name="title_activity_detail_electro">DetailElectro</string>
-    <string name="title_activity_detail_gas">DetailGas</string>
+    <string name="title_activity_detail_electro">Stromverbrauch</string>
+    <string name="title_activity_detail_gas">Gasverbrauch</string>
     <string name="title_activity_settings">Kontoeinstellungen</string>
     <string name="title_activity_dashboard">Dashboard</string>
-    <string name="title_activity_detail_water">DetailWater</string>
+    <string name="title_activity_detail_water">Wasserverbrauch</string>
 
     <!-- Strings for Actionbar -->
     <string name="action_settings">Einstellungen</string>

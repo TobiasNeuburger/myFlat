@@ -22,6 +22,7 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -72,16 +73,36 @@ public class DetailElectro extends Activity {
 		return true;
 	}
 	
-	public void saveZaehlerWater( View view )
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.action_settings:
+			Intent i = new Intent(getApplicationContext(), Settings.class);
+			startActivity(i);
+			break;
+		case R.id.actions_logout:
+			Intent j = new Intent(getApplicationContext(), Login.class);
+			j.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | 
+                    Intent.FLAG_ACTIVITY_CLEAR_TASK |
+                    Intent.FLAG_ACTIVITY_NEW_TASK);
+			startActivity(j);
+			break;
+		default:
+			break;
+		}
+		
+		return true;
+	}
+	
+	public void saveZaehler( View view )
 	{
 		TextView dateEdit = (TextView)findViewById(R.id.detail_date);
 		EditText zaehlerstandEdit = (EditText)findViewById(R.id.detail_stand);
 		
-		new SaveZaehlerWater().execute(dateEdit.getText().toString(), zaehlerstandEdit.getText().toString() );
+		new SaveZaehler().execute(dateEdit.getText().toString(), zaehlerstandEdit.getText().toString() );
 		//Log.d("Inhalte: ", dateEdit.getText().toString() + ";" + zaehlerstandEdit.getText().toString());
 	}
 	
-	class SaveZaehlerWater extends AsyncTask<String, Void, Boolean>
+	class SaveZaehler extends AsyncTask<String, Void, Boolean>
 	{
 		
 		@Override

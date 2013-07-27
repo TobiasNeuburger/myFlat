@@ -38,14 +38,11 @@
 
     </LinearLayout>
     
-	<EditText
-	    android:id="@+id/edittext"
-	    android:layout_width="match_parent"
-	    android:layout_height="2dp"
-	    android:layout_margin="10dp"
-        android:padding="@dimen/icon_padding"
-	    android:background="@drawable/border"
-	    android:inputType="none" />
+	<View
+            android:id="@+id/edittext"
+            android:layout_height="2dp"
+            android:layout_width="fill_parent"
+            android:background="#ffffff" />
 	
 	 <LinearLayout
 	     android:id="@+id/title_activity_show_zaehler_electro"
@@ -74,14 +71,11 @@
 
     </LinearLayout>
     
-	<EditText
-	    android:id="@+id/edittext"
-	    android:layout_width="match_parent"
-	    android:layout_height="2dp"
-	    android:layout_margin="10dp"
-	    android:editable="false"
-	    android:background="@drawable/border"
-	    android:inputType="none"  />
+	<View
+            android:id="@+id/edittext"
+            android:layout_height="2dp"
+            android:layout_width="fill_parent"
+            android:background="#ffffff" />
 	
 	 <LinearLayout
 	     android:id="@+id/title_activity_show_zaehler_water"
