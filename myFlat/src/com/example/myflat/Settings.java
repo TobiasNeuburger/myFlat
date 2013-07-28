@@ -46,7 +46,7 @@ public class Settings extends Activity {
 				
 				if ((firstname.length() != 0) && (lastname.length() != 0) && (newMail.length() != 0) && (password.length() != 0) &&
 						loginDataBaseAdapter.updateEntry(mail, newMail, firstname, lastname, password)) {
-					prefs.edit().putString("MAIL", mail).commit();
+					prefs.edit().putString("MAIL", newMail).commit();
 					
 					Toast.makeText(getApplicationContext(), R.string.account_update_confirm, Toast.LENGTH_SHORT).show();					
 					Intent intent = new Intent (Settings.this, Dashboard.class);

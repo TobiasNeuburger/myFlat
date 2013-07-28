@@ -112,12 +112,23 @@ public class LoginDataBaseAdapter {
 			return "NaN";
 		}
 		public boolean updateEntry(String oldMail, String newMail, String firstname, String lastname, String password) {
-			if (!entryExists(newMail)) {
+			if (oldMail.equals(newMail)) {
+				ContentValues updatedValues = new ContentValues();
+				updatedValues.put("FIRSTNAME", firstname);
+				updatedValues.put("LASTNAME", lastname);
+				updatedValues.put("PASSWORD", password);
+	
+		        String where="MAIL = ?";
+			    db.update("LOGIN",updatedValues, where, new String[]{oldMail});
+			    
+			    return true;
+			}
+			else if (!entryExists(newMail)) {
 				ContentValues updatedValues = new ContentValues();
 				updatedValues.put("MAIL", newMail);
 				updatedValues.put("FIRSTNAME", firstname);
 				updatedValues.put("LASTNAME", lastname);
-				updatedValues.put("PASSWORD",password);
+				updatedValues.put("PASSWORD", password);
 	
 		        String where="MAIL = ?";
 			    db.update("LOGIN",updatedValues, where, new String[]{oldMail});
