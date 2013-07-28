@@ -13,14 +13,14 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
-import android.os.AsyncTask;
-import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -174,7 +174,7 @@ public class DetailGas extends Activity {
 		
 		@SuppressLint("NewApi")
 		public void onDateSet(DatePicker view, int year, int month, int day) {
-			boolean userDateSet = true;
+			userDateSet = true;
 			userDay = day;
 			userMonth = month + 1;
 			userYear = year;

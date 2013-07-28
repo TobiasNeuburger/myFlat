@@ -4,6 +4,7 @@ package com.example.myflat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;
@@ -13,15 +14,14 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
-import android.os.AsyncTask;
-import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Intent;
-import android.util.Log;
+import android.os.AsyncTask;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -175,7 +175,7 @@ public class DetailWater extends Activity {
 		
 		@SuppressLint("NewApi")
 		public void onDateSet(DatePicker view, int year, int month, int day) {
-			boolean userDateSet = true;
+			userDateSet = true;
 			userDay = day;
 			userMonth = month + 1;
 			userYear = year;

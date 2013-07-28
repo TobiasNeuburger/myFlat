@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -11,11 +12,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Register extends Activity {
+	
+	LoginDataBaseAdapter loginDataBaseAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_register);
+		
+		loginDataBaseAdapter = new LoginDataBaseAdapter(this);
+		loginDataBaseAdapter = loginDataBaseAdapter.open();
 
 		LinearLayout ll = (LinearLayout) findViewById(R.id.register_login);
 		ll.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +45,9 @@ public class Register extends Activity {
 				String mail = ((TextView) findViewById(R.id.register_mail)).getText().toString();
 				String pass = ((TextView) findViewById(R.id.register_pass)).getText().toString();
 				
-				if ((firstName.length() != 0) && (lastName.length() != 0) && (mail.length() != 0) && (pass.length() != 0)) {
+				if ((firstName.length() != 0) && (lastName.length() != 0) && (mail.length() != 0) && (pass.length() != 0) && 
+						loginDataBaseAdapter.insertEntry(mail, firstName, lastName, pass)) {
+					
 					Toast.makeText(getApplicationContext(), R.string.registration_confirm, Toast.LENGTH_SHORT).show();
 					Intent intent = new Intent(getApplicationContext(), Login.class);
 					intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -59,4 +67,16 @@ public class Register extends Activity {
 		return true;
 	}
 
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.context_register:
+			Intent i = new Intent(getApplicationContext(), Login.class);
+			startActivity(i);
+			break;
+		default:
+			break;
+		}
+		
+		return true;
+	}
 }

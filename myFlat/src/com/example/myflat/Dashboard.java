@@ -56,16 +56,26 @@ public class Dashboard extends Activity {
 	
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case R.id.action_settings:
+		case R.id.context_dashboard_settings:
 			Intent i = new Intent(getApplicationContext(), Settings.class);
 			startActivity(i);
 			break;
-		case R.id.actions_logout:
+		case R.id.context_dashboard_logout:
 			Intent j = new Intent(getApplicationContext(), Login.class);
-			j.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | 
-                    Intent.FLAG_ACTIVITY_CLEAR_TASK |
-                    Intent.FLAG_ACTIVITY_NEW_TASK);
+			j.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
 			startActivity(j);
+			break;
+		case R.id.context_dashboard_gas:
+			Intent k = new Intent(getApplicationContext(), DetailGas.class);
+			startActivity(k);
+			break;
+		case R.id.context_dashboard_electric:
+			Intent l = new Intent(getApplicationContext(), DetailElectro.class);
+			startActivity(l);
+			break;
+		case R.id.context_dashboard_water:
+			Intent m = new Intent(getApplicationContext(), DetailWater.class);
+			startActivity(m);
 			break;
 		default:
 			break;
