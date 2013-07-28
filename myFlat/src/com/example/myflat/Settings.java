@@ -44,8 +44,8 @@ public class Settings extends Activity {
 				String newMail = ((TextView) findViewById(R.id.account_mail)).getText().toString();
 				String password = ((TextView) findViewById(R.id.account_pass)).getText().toString();
 				
-				if ((firstname.length() != 0) && (lastname.length() != 0) && (newMail.length() != 0) && (password.length() != 0)) {
-					loginDataBaseAdapter.updateEntry(mail, newMail, firstname, lastname, password);
+				if ((firstname.length() != 0) && (lastname.length() != 0) && (newMail.length() != 0) && (password.length() != 0) &&
+						loginDataBaseAdapter.updateEntry(mail, newMail, firstname, lastname, password)) {
 					prefs.edit().putString("MAIL", mail).commit();
 					
 					Toast.makeText(getApplicationContext(), R.string.account_update_confirm, Toast.LENGTH_SHORT).show();					

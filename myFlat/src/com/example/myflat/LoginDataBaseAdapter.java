@@ -111,14 +111,19 @@ public class LoginDataBaseAdapter {
 			cursor.close();
 			return "NaN";
 		}
-		public void updateEntry(String oldMail, String newMail, String firstname, String lastname, String password) {
-			ContentValues updatedValues = new ContentValues();
-			updatedValues.put("MAIL", newMail);
-			updatedValues.put("FIRSTNAME", firstname);
-			updatedValues.put("LASTNAME", lastname);
-			updatedValues.put("PASSWORD",password);
-
-	        String where="MAIL = ?";
-		    db.update("LOGIN",updatedValues, where, new String[]{oldMail});			   
+		public boolean updateEntry(String oldMail, String newMail, String firstname, String lastname, String password) {
+			if (!entryExists(newMail)) {
+				ContentValues updatedValues = new ContentValues();
+				updatedValues.put("MAIL", newMail);
+				updatedValues.put("FIRSTNAME", firstname);
+				updatedValues.put("LASTNAME", lastname);
+				updatedValues.put("PASSWORD",password);
+	
+		        String where="MAIL = ?";
+			    db.update("LOGIN",updatedValues, where, new String[]{oldMail});
+			    
+			    return true;
+			}
+			return false;
 		}		
 }
