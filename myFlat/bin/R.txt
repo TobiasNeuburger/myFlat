@@ -32,8 +32,8 @@ int id account_login 0x7f04003d
 int id account_mail 0x7f040041
 int id account_pass 0x7f040042
 int id account_title 0x7f04003e
-int id action_settings 0x7f040048
-int id actions_logout 0x7f040049
+int id action_settings 0x7f040049
+int id actions_logout 0x7f04004a
 int id alignBounds 0x7f040002
 int id alignMargins 0x7f040003
 int id bottom 0x7f040005
@@ -80,6 +80,7 @@ int id login_pass 0x7f040030
 int id login_question 0x7f040033
 int id login_register 0x7f040032
 int id login_solution 0x7f040034
+int id progressBar1 0x7f040047
 int id register_action 0x7f040039
 int id register_firstname 0x7f040035
 int id register_lastname 0x7f040036
@@ -91,7 +92,7 @@ int id register_pass 0x7f040038
 int id right 0x7f040007
 int id start 0x7f040010
 int id textView1 0x7f040014
-int id textView2 0x7f040047
+int id textView2 0x7f040048
 int id title_activity_show_zaehler_electro 0x7f040016
 int id title_activity_show_zaehler_gas 0x7f040012
 int id title_activity_show_zaehler_water 0x7f040018
@@ -107,7 +108,8 @@ int layout activity_settings 0x7f030006
 int layout activity_show_zaehler_electro 0x7f030007
 int layout activity_show_zaehler_gas 0x7f030008
 int layout activity_show_zaehler_water 0x7f030009
-int layout listrow 0x7f03000a
+int layout activity_start 0x7f03000a
+int layout listrow 0x7f03000b
 int menu dashboard 0x7f080000
 int menu detail 0x7f080001
 int menu detail_electro 0x7f080002
@@ -119,6 +121,7 @@ int menu settings 0x7f080007
 int menu show_zaehler_gas 0x7f080008
 int menu show_zaehler_water 0x7f080009
 int menu show_zaheler_electro 0x7f08000a
+int menu start 0x7f08000b
 int string account_action 0x7f060038
 int string account_back 0x7f060039
 int string account_firstname 0x7f060034
@@ -128,8 +131,8 @@ int string account_pass 0x7f060037
 int string account_title 0x7f060033
 int string account_update_confirm 0x7f06003d
 int string account_update_error 0x7f06003e
-int string action_settings 0x7f06000d
-int string actions_logout 0x7f06000e
+int string action_settings 0x7f06000c
+int string actions_logout 0x7f06000d
 int string app_name 0x7f060000
 int string dashboard_energy 0x7f06002f
 int string dashboard_gas 0x7f06002e
@@ -170,18 +173,18 @@ int string register_pass 0x7f06001b
 int string register_register 0x7f060015
 int string registration_confirm 0x7f06003b
 int string registration_error 0x7f06003c
-int string title_activity_dashboard 0x7f06000b
-int string title_activity_detail_electro 0x7f060008
-int string title_activity_detail_gas 0x7f060009
-int string title_activity_detail_water 0x7f06000c
-int string title_activity_main 0x7f060006
-int string title_activity_settings 0x7f06000a
-int string title_activity_show_zaehler 0x7f060002
-int string title_activity_show_zaehler_electro 0x7f060003
-int string title_activity_show_zaehler_gas 0x7f060004
-int string title_activity_show_zaehler_water 0x7f060005
-int string title_activity_show_zaheler_electro 0x7f060007
-int string title_activity_test 0x7f060001
+int string start_wait 0x7f06000e
+int string title_activity_dashboard 0x7f06000a
+int string title_activity_detail_electro 0x7f060007
+int string title_activity_detail_gas 0x7f060008
+int string title_activity_detail_water 0x7f06000b
+int string title_activity_login 0x7f060002
+int string title_activity_register 0x7f060003
+int string title_activity_settings 0x7f060009
+int string title_activity_show_zaehler_electro 0x7f060004
+int string title_activity_show_zaehler_gas 0x7f060005
+int string title_activity_show_zaehler_water 0x7f060006
+int string title_activity_start 0x7f060001
 int style AppBaseTheme 0x7f070000
 int style AppTheme 0x7f070001
 int[] styleable GridLayout { 0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006 }
