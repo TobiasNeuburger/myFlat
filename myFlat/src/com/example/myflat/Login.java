@@ -1,7 +1,9 @@
 package com.example.myflat;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,11 +14,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Login extends Activity {
+	
+	LoginDataBaseAdapter loginDataBaseAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+		
+		final SharedPreferences prefs = this.getSharedPreferences("com.example.myflat",Context.MODE_PRIVATE);
+		
+		loginDataBaseAdapter = new LoginDataBaseAdapter(this);
+		loginDataBaseAdapter = loginDataBaseAdapter.open();
 		
 		LinearLayout ll = (LinearLayout) findViewById(R.id.login_register);
 		ll.setOnClickListener(new View.OnClickListener() {
@@ -35,9 +44,10 @@ public class Login extends Activity {
 			@Override
 			public void onClick(View v) {
 				String mail = ((TextView) findViewById(R.id.login_mail)).getText().toString();
-				String pass = ((TextView) findViewById(R.id.login_pass)).getText().toString();
+				String password = ((TextView) findViewById(R.id.login_pass)).getText().toString();
 				
-				if ((mail.length() != 0) && (pass.length() != 0)) {
+				if (mail.length() != 0 && password.length() != 0 && loginDataBaseAdapter.checkPassword(mail, password)) {
+					prefs.edit().putString("MAIL", mail).commit();
 					Intent intent = new Intent(getApplicationContext(), Dashboard.class);
 					intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
 	        		startActivity(intent);

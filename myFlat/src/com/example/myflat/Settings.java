@@ -13,6 +13,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Settings extends Activity {
+	
+	LoginDataBaseAdapter loginDataBaseAdapter;
+	String mail;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,29 +24,29 @@ public class Settings extends Activity {
 
 		final SharedPreferences prefs = this.getSharedPreferences("com.example.myflat",Context.MODE_PRIVATE);
 		
-		String firstName = prefs.getString("firstName", "John");
-		String lastName = prefs.getString("lastName", "Doe");
-		String mail = prefs.getString("mail", "john.doe@student.fhws.de");
-		String pass = prefs.getString("pass", "JohnDoe123");
+		loginDataBaseAdapter = new LoginDataBaseAdapter(this);
+		loginDataBaseAdapter = loginDataBaseAdapter.open();
 		
-		((TextView) findViewById(R.id.account_firstname)).setText(firstName);
-		((TextView) findViewById(R.id.account_lastname)).setText(lastName);
+		mail = prefs.getString("MAIL", "nan");
+				
+		((TextView) findViewById(R.id.account_firstname)).setText(loginDataBaseAdapter.getFirstname(mail));
+		((TextView) findViewById(R.id.account_lastname)).setText(loginDataBaseAdapter.getLastname(mail));
 		((TextView) findViewById(R.id.account_mail)).setText(mail);
-		((TextView) findViewById(R.id.account_pass)).setText(pass);
+		((TextView) findViewById(R.id.account_pass)).setText(loginDataBaseAdapter.getPassword(mail));
 				
 		Button updateButton = (Button) findViewById(R.id.account_action);
 		updateButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				String firstName = ((TextView) findViewById(R.id.account_firstname)).getText().toString();
-				String lastName = ((TextView) findViewById(R.id.account_lastname)).getText().toString();
-				String mail = ((TextView) findViewById(R.id.account_mail)).getText().toString();
-				String pass = ((TextView) findViewById(R.id.account_pass)).getText().toString();
+				String firstname = ((TextView) findViewById(R.id.account_firstname)).getText().toString();
+				String lastname = ((TextView) findViewById(R.id.account_lastname)).getText().toString();
+				String newMail = ((TextView) findViewById(R.id.account_mail)).getText().toString();
+				String password = ((TextView) findViewById(R.id.account_pass)).getText().toString();
 				
-				if ((firstName.length() != 0) && (lastName.length() != 0) && (mail.length() != 0) && (pass.length() != 0)) {
-					
-					prefs.edit().putString("firstName", firstName).putString("lastName", lastName).putString("mail", mail).putString("pass", pass).commit();
+				if ((firstname.length() != 0) && (lastname.length() != 0) && (newMail.length() != 0) && (password.length() != 0)) {
+					loginDataBaseAdapter.updateEntry(mail, newMail, firstname, lastname, password);
+					prefs.edit().putString("MAIL", mail).commit();
 					
 					Toast.makeText(getApplicationContext(), R.string.account_update_confirm, Toast.LENGTH_SHORT).show();					
 					Intent intent = new Intent (Settings.this, Dashboard.class);
@@ -75,9 +78,14 @@ public class Settings extends Activity {
 	
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case R.id.context_account:
-			Intent i = new Intent(getApplicationContext(), Dashboard.class);
+		case R.id.context_account_logout:
+			Intent i = new Intent(getApplicationContext(), Login.class);
+			i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
 			startActivity(i);
+			break;
+		case R.id.context_account_dashboard:
+			Intent j = new Intent(getApplicationContext(), Dashboard.class);
+			startActivity(j);
 			break;
 		default:
 			break;

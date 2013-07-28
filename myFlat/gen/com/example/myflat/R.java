@@ -46,8 +46,10 @@ public final class R {
         public static final int account_title=0x7f08002c;
         public static final int action_settings=0x7f08003d;
         public static final int actions_logout=0x7f08003c;
+        public static final int border=0x7f080003;
         public static final int button_submit=0x7f08000f;
-        public static final int context_account=0x7f080040;
+        public static final int context_account_dashboard=0x7f080040;
+        public static final int context_account_logout=0x7f080041;
         public static final int context_dashboard_electric=0x7f08003a;
         public static final int context_dashboard_gas=0x7f080039;
         public static final int context_dashboard_logout=0x7f080038;
@@ -69,7 +71,6 @@ public final class R {
         public static final int detail_water_erfassen=0x7f080019;
         public static final int detail_water_headline=0x7f080018;
         public static final int detail_water_update=0x7f08001b;
-        public static final int edittext=0x7f080003;
         public static final int imageView1=0x7f080017;
         public static final int imageView2=0x7f080009;
         public static final int image_electro=0x7f080005;

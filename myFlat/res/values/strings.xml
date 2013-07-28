@@ -83,7 +83,7 @@
     <string name="account_back">Zurück</string>
 
     <!-- Feedback -->
-    <string name="login_error">Login fehlgeschlagen. Haben Sie alle Felder ausgefüllt?</string>
+    <string name="login_error">Login fehlgeschlagen</string>
     <string name="registration_confirm">Konto erfolgreich erstellt</string>
     <string name="registration_error">Konto konnte nicht erstellt werden</string>
     <string name="account_update_confirm">Konto erfolgreich aktualisiert</string>

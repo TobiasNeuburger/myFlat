@@ -39,7 +39,7 @@
     </LinearLayout>
     
 	<View
-            android:id="@+id/edittext"
+            android:id="@+id/border"
             android:layout_height="2dp"
             android:layout_width="fill_parent"
             android:background="#ffffff" />
@@ -72,7 +72,7 @@
     </LinearLayout>
     
 	<View
-            android:id="@+id/edittext"
+            android:id="@+id/border"
             android:layout_height="2dp"
             android:layout_width="fill_parent"
             android:background="#ffffff" />
