@@ -23,6 +23,7 @@
     <string name="context_dashboard_electric">Stromverbrauch</string>
     <string name="context_dashboard_water">Wasserverbrauch</string>
     <string name="context_account">Dashboard</string>
+    <string name="show_list">Liste anzeigen</string>
     
     <!-- String for Start Screen -->
     <string name="start_wait">Bitte warten</string>
