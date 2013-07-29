@@ -91,9 +91,9 @@ public class LoginDataBaseAdapter {
 			Cursor cursor = db.query("LOGIN", null, " MAIL=?", new String[]{mail}, null, null, null);
 			if (cursor.getCount() > 0) {
 				cursor.moveToFirst();
-				String firstname = cursor.getString(cursor.getColumnIndex("LASTNAME"));
+				String lastname = cursor.getString(cursor.getColumnIndex("LASTNAME"));
 				cursor.close();
-				return firstname;
+				return lastname;
 			}
 			
 			cursor.close();
@@ -103,9 +103,9 @@ public class LoginDataBaseAdapter {
 			Cursor cursor = db.query("LOGIN", null, " MAIL=?", new String[]{mail}, null, null, null);
 			if (cursor.getCount() > 0) {
 				cursor.moveToFirst();
-				String firstname = cursor.getString(cursor.getColumnIndex("PASSWORD"));
+				String password = cursor.getString(cursor.getColumnIndex("PASSWORD"));
 				cursor.close();
-				return firstname;
+				return password;
 			}
 			
 			cursor.close();
