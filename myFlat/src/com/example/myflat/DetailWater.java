@@ -87,6 +87,10 @@ public class DetailWater extends Activity {
                     Intent.FLAG_ACTIVITY_NEW_TASK);
 			startActivity(j);
 			break;
+		case R.id.show_list:
+			Intent k = new Intent(getApplicationContext(), ShowZaehlerWater.class);
+			startActivity(k);
+			break;
 		default:
 			break;
 		}
