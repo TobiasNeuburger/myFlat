@@ -59,8 +59,6 @@ public class ShowZaehlerWater extends ListActivity {
 		
 		class LoadAllZaehlerstaende extends AsyncTask<Void,Void,DataAdapter>
 		{
-			Dialog progress;
-
 			@Override
 			protected DataAdapter doInBackground(Void... params) 
 			{
@@ -83,7 +81,7 @@ public class ShowZaehlerWater extends ListActivity {
 				}
 				catch( Exception e )
 				{
-					// ignore
+					e.printStackTrace();
 				}
 				
 				return adapter;
@@ -91,7 +89,6 @@ public class ShowZaehlerWater extends ListActivity {
 
 			@Override
 			protected void onPostExecute(DataAdapter result) {
-//		        progress.dismiss();
 				ShowZaehlerWater.this.setListAdapter(result);
 			}
 		}

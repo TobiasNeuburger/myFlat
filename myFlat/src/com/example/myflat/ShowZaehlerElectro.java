@@ -58,8 +58,6 @@ public class ShowZaehlerElectro extends ListActivity {
 	
 	class LoadAllZaehlerstaende extends AsyncTask<Void,Void,DataAdapter>
 	{
-		Dialog progress;
-
 		@Override
 		protected DataAdapter doInBackground(Void... params) 
 		{
@@ -82,7 +80,7 @@ public class ShowZaehlerElectro extends ListActivity {
 			}
 			catch( Exception e )
 			{
-				// ignore
+				e.printStackTrace();
 			}
 			
 			return adapter;
@@ -90,7 +88,6 @@ public class ShowZaehlerElectro extends ListActivity {
 
 		@Override
 		protected void onPostExecute(DataAdapter result) {
-//	        progress.dismiss();
 			ShowZaehlerElectro.this.setListAdapter(result);
 		}
 	}
