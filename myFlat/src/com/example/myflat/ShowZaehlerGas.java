@@ -32,7 +32,7 @@ public class ShowZaehlerGas extends ListActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) 
 	{
-		getMenuInflater().inflate(R.menu.detail_gas, menu);
+		getMenuInflater().inflate(R.menu.show_zaehler_gas, menu);
 		return true;
 	}
 	

@@ -32,7 +32,7 @@ public class ShowZaehlerElectro extends ListActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) 
 	{
-		getMenuInflater().inflate(R.menu.detail_electro, menu);
+		getMenuInflater().inflate(R.menu.show_zaheler_electro, menu);
 		return true;
 	}
 	

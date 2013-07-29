@@ -33,7 +33,7 @@ public class ShowZaehlerWater extends ListActivity {
 		@Override
 		public boolean onCreateOptionsMenu(Menu menu) 
 		{
-			getMenuInflater().inflate(R.menu.detail, menu);
+			getMenuInflater().inflate(R.menu.show_zaehler_water, menu);
 			return true;
 		}
 		
